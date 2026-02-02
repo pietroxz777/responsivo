@@ -5,6 +5,7 @@
   <title>Exercícios - Resposivo</title>
   <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
 
   <!-- Exercício 2 – Header -->
@@ -58,13 +59,19 @@
   <!-- Exercício 7 – Ocultar Elementos -->
   <section>
     <h2>Exercício 7 – Ocultar Imagem</h2>
-    <img class="imagem" src="https://via.placeholder.com/200" alt="Imagem exemplo">
+    <img class="imagem" src="https://img.freepik.com/fotos-gratis/jogadores-de-futebol-em-acao-em-estadios-profissionais_654080-1746.jpg?semt=ais_hybrid&w=740&q=80" alt="Imagem exemplo">
   </section>
 
   <!-- Exercício 8 – Botão Responsivo -->
   <section>
     <h2>Exercício 8 – Botão Responsivo</h2>
     <button class="btn">Clique Aqui</button>
+
+    <!-- Imagem que aparece ao clicar -->
+    <img id="img-botao"
+         src="https://img.freepik.com/fotos-gratis/jogadores-de-futebol-em-acao-em-estadios-profissionais_654080-1746.jpg?semt=ais_hybrid&w=740&q=80"
+         alt="Imagem do botão"
+         style="display: none; width: 200px; margin-top: 20px;">
   </section>
 
   <!-- Exercício 9 – Flex Direction -->
@@ -76,6 +83,15 @@
       <div>Item C</div>
     </div>
   </section>
+
+  <script>
+    const botao = document.querySelector('.btn');
+    const imagem = document.getElementById('img-botao');
+
+    botao.addEventListener('click', () => {
+      imagem.style.display = 'block';
+    });
+  </script>
 
 </body>
 </html>
